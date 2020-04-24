@@ -1,1 +1,1 @@
-# jsonify: Quickly serialize and deserialize python to json objects
+# json-coder: Quickly serialize and deserialize python to json objects
