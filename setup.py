@@ -15,4 +15,9 @@ setup(name='jsonify',
       url='https://github.com/xiamaz/jsonify',
       packages=['jsonify'],
       python_requires='>=3.6',
+      classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        ],
      )
