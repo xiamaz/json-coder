@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(name='json-coder',
       version='0.1',
-      description='Easily desrialize and serialize complex objects to json.',
+      description='Easily deserialize and serialize complex objects to json.',
       long_description=long_description,
       long_description_content_type="text/markdown",
       author='Max Zhao',
