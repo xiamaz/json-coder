@@ -61,7 +61,7 @@ class ObjectEncoder(json.JSONEncoder):
     def default(self, o):  # pylint: disable=E0202
         obj_key = _OBJ_REGISTER.get_object_key(o)
         if obj_key is not None:
-            return _OBJ_REGISTER.get_serializer(obj_key)(o)
+            return {obj_key: _OBJ_REGISTER.get_serializer(obj_key)(o)}
         return json.JSONEncoder.default(self, o)
 
 

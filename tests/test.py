@@ -3,10 +3,10 @@ import datetime
 from dataclasses import dataclass
 
 import json
-import jsonify
+import json_coder
 
 # Usage idea 1
-@jsonify.jsonify("testclass")
+@json_coder.jsonify("testclass")
 class TestClass:
     def __init__(self, a: int):
         self.a = a
@@ -18,7 +18,7 @@ a = json.loads('{"__testclass__": {"a": 10}}')
 print(a)  # should now be an object of testclass
 print(json.dumps(a))
 
-@jsonify.jsonify("testclassb")
+@json_coder.jsonify("testclassb")
 class TestClassB:
     def __init__(self, a: int):
         self.a = a
@@ -32,7 +32,7 @@ print(json.dumps(b))
 
 
 # Usage idea 2
-@jsonify.jsonify("testdataclass")
+@json_coder.jsonify("testdataclass")
 @dataclass
 class TestDataClass:
     a: int
@@ -43,7 +43,7 @@ print(a)  # should now be an object of testdataclass
 print(json.dumps(a))
 
 # Usage idea 3
-jsonify.register("datetime", datetime.datetime, datetime.datetime.fromisoformat, datetime.datetime.isoformat)
+json_coder.register("datetime", datetime.datetime, datetime.datetime.fromisoformat, datetime.datetime.isoformat)
 d = json.loads('{"__datetime__": "2018-10-10"}')
 print(d)
 print(json.dumps(d))

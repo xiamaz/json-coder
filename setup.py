@@ -6,14 +6,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(name='json-coder',
-      version='0.1',
+      version='0.2',
       description='Easily deserialize and serialize complex objects to json.',
       long_description=long_description,
       long_description_content_type="text/markdown",
       author='Max Zhao',
       author_email='alcasa.mz@gmail.com',
       url='https://github.com/xiamaz/jsonify',
-      packages=['json-coder'],
+      packages=['json_coder'],
       python_requires='>=3.6',
       classifiers=[
         "Programming Language :: Python :: 3",
