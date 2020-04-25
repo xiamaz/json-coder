@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(name='json-coder',
-      version='0.2',
+      version='0.3',
       description='Easily deserialize and serialize complex objects to json.',
       long_description=long_description,
       long_description_content_type="text/markdown",

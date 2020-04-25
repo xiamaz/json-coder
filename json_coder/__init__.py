@@ -80,8 +80,16 @@ def jsonify_loads(s):
     return _json_loads(s, object_hook=_object_hook)
 
 
+def jsonify_load(s):
+    return _json_load(s, object_hook=_object_hook)
+
+
 def jsonify_dumps(o):
     return _json_dumps(o, cls=ObjectEncoder)
+
+
+def jsonify_dump(o):
+    return _json_dump(o, cls=ObjectEncoder)
 
 
 def find_init(cls):
@@ -119,5 +127,9 @@ def register(key: str, rtype: "type", init_fun: "Callable", dump_fun: "Callable"
 
 _json_loads = json.loads
 _json_dumps = json.dumps
+_json_dump = json.dump
+_json_load = json.load
 json.loads = jsonify_loads
 json.dumps = jsonify_dumps
+json.load = jsonify_load
+json.dump = jsonify_dump
