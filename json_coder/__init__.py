@@ -88,8 +88,8 @@ def jsonify_dumps(o):
     return _json_dumps(o, cls=ObjectEncoder)
 
 
-def jsonify_dump(o):
-    return _json_dump(o, cls=ObjectEncoder)
+def jsonify_dump(o, fp):
+    return _json_dump(o, fp, cls=ObjectEncoder)
 
 
 def find_init(cls):
