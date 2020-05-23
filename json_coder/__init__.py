@@ -81,7 +81,7 @@ def jsonify_loads(s):
 
 
 def jsonify_load(s):
-    return _json_load(s, object_hook=_object_hook)
+    return jsonify_loads(s.read())
 
 
 def jsonify_dumps(o):
