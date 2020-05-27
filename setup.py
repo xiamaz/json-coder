@@ -2,11 +2,13 @@
 
 from setuptools import setup
 
+__version__ = "0.5.0"
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(name='json-coder',
-      version='0.5',
+      version=__version__,
       description='Easily deserialize and serialize complex objects to json.',
       long_description=long_description,
       long_description_content_type="text/markdown",
