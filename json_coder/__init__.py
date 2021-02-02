@@ -84,12 +84,12 @@ def jsonify_load(s):
     return jsonify_loads(s.read())
 
 
-def jsonify_dumps(o):
-    return _json_dumps(o, cls=ObjectEncoder)
+def jsonify_dumps(o, cls=ObjectEncoder):
+    return _json_dumps(o, cls=cls)
 
 
-def jsonify_dump(o, fp):
-    return _json_dump(o, fp, cls=ObjectEncoder)
+def jsonify_dump(o, fp, cls=ObjectEncoder):
+    return _json_dump(o, fp, cls=cls)
 
 
 def find_init(cls):
